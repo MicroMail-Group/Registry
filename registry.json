@@ -1,6 +1,201 @@
 {
   "$schema": "https://raw.githubusercontent.com/grimmdev/micromail-registry/main/schema.json",
   "version": "1.0.0",
-  "updated_at": "2026-11-15T00:00:00Z",
-  "addons": []
+  "updated_at": "2026-11-16T17:19:18Z",
+  "addons": [
+    {
+      "id": "official.ai-composer",
+      "name": "Smart Email Composer (Local Transformers & WASM)",
+      "version": "1.0.0",
+      "runtime": "frontend",
+      "description": "Compose and polish emails using client-side Transformers.js neural models and lightweight WASM running 100% in your browser.",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.2/ai-composer-wasm.zip",
+      "sha256": "a02dcd990e1a08c67c45e61f8889fb2ed116864388d540e40c826d98f07f1bc9",
+      "manifest": {
+        "id": "official.ai-composer",
+        "name": "Smart Email Composer (Local Transformers & WASM)",
+        "version": "1.0.0",
+        "runtime": "frontend",
+        "description": "Compose and polish emails using client-side Transformers.js neural models and lightweight WASM running 100% in your browser.",
+        "permissions": [
+          "ui:compose_actions",
+          "compose:insert_text"
+        ],
+        "frontend": {
+          "entry": "ui/index.js",
+          "slots": [
+            "compose_actions"
+          ],
+          "requires_coop_coep": false
+        },
+        "config_schema": [
+          {
+            "key": "engine",
+            "type": "select",
+            "options": [
+              "Transformers.js (Neural SLM)",
+              "Fast Local WASM"
+            ],
+            "default": "Transformers.js (Neural SLM)",
+            "label": "Inference Engine"
+          },
+          {
+            "key": "default_tone",
+            "type": "select",
+            "options": [
+              "Professional",
+              "Friendly",
+              "Concise",
+              "Urgent",
+              "Formal",
+              "Casual"
+            ],
+            "default": "Professional",
+            "label": "Default Tone"
+          },
+          {
+            "key": "default_length",
+            "type": "select",
+            "options": [
+              "Standard",
+              "Concise",
+              "Detailed"
+            ],
+            "default": "Standard",
+            "label": "Default Length"
+          }
+        ]
+      }
+    },
+    {
+      "id": "official.antivirus",
+      "name": "WASM Anti-Virus & Threat Scanner",
+      "version": "1.0.0",
+      "runtime": "backend",
+      "description": "Scans attachments and email contents for malware signatures, dangerous executable payloads, and EICAR threats.",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.2/antivirus-wasm.zip",
+      "sha256": "977362462dae47d84b804cdb280ee6e16b3ca3b06a1e89cf599669b95df9f535",
+      "manifest": {
+        "id": "official.antivirus",
+        "name": "WASM Anti-Virus & Threat Scanner",
+        "version": "1.0.0",
+        "runtime": "backend",
+        "description": "Scans attachments and email contents for malware signatures, dangerous executable payloads, and EICAR threats.",
+        "permissions": [
+          "hook:on_inbound_pre_store",
+          "fs:read_attachment"
+        ],
+        "backend": {
+          "wasm": "backend.wasm",
+          "hooks": [
+            "on_inbound_pre_store"
+          ],
+          "timeout_ms": 1500
+        },
+        "config_schema": [
+          {
+            "key": "block_executables",
+            "type": "boolean",
+            "default": true,
+            "label": "Block Executable Attachments (.exe, .bat, .scr, .vbs)"
+          },
+          {
+            "key": "action_on_threat",
+            "type": "select",
+            "options": [
+              "reject",
+              "spam"
+            ],
+            "default": "reject",
+            "label": "Action on Threat Detected"
+          }
+        ]
+      }
+    },
+    {
+      "id": "official.spam-filter",
+      "name": "Heuristic & DNSBL Spam Filter",
+      "version": "1.0.0",
+      "runtime": "backend",
+      "description": "Scores inbound emails in-container via WebAssembly before inbox delivery.",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.2/spam-bayes-wasm.zip",
+      "sha256": "5589e8827f5e9e5981aa03fdb5ec931dcf4eed66140ef551bf215ad4472d0226",
+      "manifest": {
+        "id": "official.spam-filter",
+        "name": "Heuristic & DNSBL Spam Filter",
+        "version": "1.0.0",
+        "runtime": "backend",
+        "description": "Scores inbound emails in-container via WebAssembly before inbox delivery.",
+        "permissions": [
+          "hook:on_inbound_pre_store",
+          "net:dns"
+        ],
+        "backend": {
+          "wasm": "backend.wasm",
+          "hooks": [
+            "on_inbound_pre_store"
+          ],
+          "timeout_ms": 1500
+        },
+        "config_schema": [
+          {
+            "key": "threshold",
+            "type": "number",
+            "default": 0.75,
+            "label": "Spam Quarantine Threshold"
+          }
+        ]
+      }
+    },
+    {
+      "id": "official.voice-search",
+      "name": "Offline Voice Actions (WASM)",
+      "version": "1.1.0",
+      "runtime": "frontend",
+      "description": "Voice search your inbox and dictate emails using speech recognition or embedded local WASM speech model.",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.2/voice-search-wasm.zip",
+      "sha256": "5a0c01abf662e30ef5aaf62491f2aa4375a14dd2334083e03155c3eb10fc5b3b",
+      "manifest": {
+        "id": "official.voice-search",
+        "name": "Offline Voice Actions (WASM)",
+        "version": "1.1.0",
+        "runtime": "frontend",
+        "description": "Voice search your inbox and dictate emails using speech recognition or embedded local WASM speech model.",
+        "permissions": [
+          "ui:search_bar",
+          "ui:set_search_query",
+          "ui:compose_actions",
+          "compose:insert_text"
+        ],
+        "frontend": {
+          "entry": "ui/index.js",
+          "slots": [
+            "search_bar_action",
+            "compose_actions"
+          ],
+          "requires_coop_coep": false
+        },
+        "config_schema": [
+          {
+            "key": "language",
+            "type": "select",
+            "options": [
+              "en",
+              "es",
+              "fr",
+              "de"
+            ],
+            "default": "en",
+            "label": "Language"
+          },
+          {
+            "key": "auto_submit",
+            "type": "boolean",
+            "default": true,
+            "label": "Submit search automatically"
+          }
+        ]
+      }
+    }
+  ]
 }
