@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/grimmdev/micromail-registry/main/schema.json",
   "version": "1.0.0",
-  "updated_at": "2026-11-17T23:48:08Z",
+  "updated_at": "2026-11-17T23:57:24Z",
   "addons": [
     {
       "id": "official.ai-composer",
       "name": "Smart Email Composer (Local Transformers & WASM)",
-      "version": "1.0.0",
+      "version": "1.0.4",
       "runtime": "frontend",
       "description": "Compose and polish emails using client-side Transformers.js neural models and lightweight WASM running 100% in your browser.",
       "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.4/ai-composer-wasm.zip",
@@ -14,7 +14,7 @@
       "manifest": {
         "id": "official.ai-composer",
         "name": "Smart Email Composer (Local Transformers & WASM)",
-        "version": "1.0.0",
+        "version": "1.0.4",
         "runtime": "frontend",
         "description": "Compose and polish emails using client-side Transformers.js neural models and lightweight WASM running 100% in your browser.",
         "permissions": [
@@ -80,7 +80,7 @@
     {
       "id": "official.antivirus",
       "name": "WASM Anti-Virus & Threat Scanner",
-      "version": "1.0.0",
+      "version": "1.0.4",
       "runtime": "backend",
       "description": "Scans attachments and email contents for malware signatures, dangerous executable payloads, and EICAR threats.",
       "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.4/antivirus-wasm.zip",
@@ -88,7 +88,7 @@
       "manifest": {
         "id": "official.antivirus",
         "name": "WASM Anti-Virus & Threat Scanner",
-        "version": "1.0.0",
+        "version": "1.0.4",
         "runtime": "backend",
         "description": "Scans attachments and email contents for malware signatures, dangerous executable payloads, and EICAR threats.",
         "permissions": [
@@ -125,7 +125,7 @@
     {
       "id": "official.spam-filter",
       "name": "Heuristic & DNSBL Spam Filter",
-      "version": "1.0.0",
+      "version": "1.0.4",
       "runtime": "backend",
       "description": "Scores inbound emails in-container via WebAssembly before inbox delivery.",
       "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.4/spam-bayes-wasm.zip",
@@ -133,7 +133,7 @@
       "manifest": {
         "id": "official.spam-filter",
         "name": "Heuristic & DNSBL Spam Filter",
-        "version": "1.0.0",
+        "version": "1.0.4",
         "runtime": "backend",
         "description": "Scores inbound emails in-container via WebAssembly before inbox delivery.",
         "permissions": [
