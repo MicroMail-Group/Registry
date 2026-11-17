@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/grimmdev/micromail-registry/main/schema.json",
   "version": "1.0.0",
-  "updated_at": "2026-11-16T17:32:55Z",
+  "updated_at": "2026-11-17T23:48:08Z",
   "addons": [
     {
       "id": "official.ai-composer",
@@ -9,8 +9,8 @@
       "version": "1.0.0",
       "runtime": "frontend",
       "description": "Compose and polish emails using client-side Transformers.js neural models and lightweight WASM running 100% in your browser.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.3/ai-composer-wasm.zip",
-      "sha256": "4bd8b5549df2b121777bb6d4b07088673c2d9a7f6effe4078cb284d0f368ef9e",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.4/ai-composer-wasm.zip",
+      "sha256": "b352bdea216028900d204143c657f0d1e91f840fa44ee25a73ab8c10c7c4b540",
       "manifest": {
         "id": "official.ai-composer",
         "name": "Smart Email Composer (Local Transformers & WASM)",
@@ -29,6 +29,16 @@
           "requires_coop_coep": false
         },
         "config_schema": [
+          {
+            "key": "model",
+            "type": "select",
+            "options": [
+              "Qwen 2.5 (0.5B - Recommended, Smarter)",
+              "SmolLM2 (135M - Ultra Lightweight)"
+            ],
+            "default": "Qwen 2.5 (0.5B - Recommended, Smarter)",
+            "label": "Neural Model"
+          },
           {
             "key": "engine",
             "type": "select",
@@ -73,8 +83,8 @@
       "version": "1.0.0",
       "runtime": "backend",
       "description": "Scans attachments and email contents for malware signatures, dangerous executable payloads, and EICAR threats.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.3/antivirus-wasm.zip",
-      "sha256": "ef408ee24f8f9c8bdcd9f875ae02e8c188b15e25a2fdae07b714b8f0ede47fe0",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.4/antivirus-wasm.zip",
+      "sha256": "209b1ac7937e8320050358c3655abc4ea88319c61ce2ee98888fcd417fa5ff31",
       "manifest": {
         "id": "official.antivirus",
         "name": "WASM Anti-Virus & Threat Scanner",
@@ -118,8 +128,8 @@
       "version": "1.0.0",
       "runtime": "backend",
       "description": "Scores inbound emails in-container via WebAssembly before inbox delivery.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.3/spam-bayes-wasm.zip",
-      "sha256": "4dc00a53028bca7ec1a9e6b7dce6ee143cb41500eec276dd37bc0846d45e6e59",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.4/spam-bayes-wasm.zip",
+      "sha256": "a08e2722a707fa5ab0f9abe2cdf25dc10abbe6ed95f2caa1703d07c660b336fa",
       "manifest": {
         "id": "official.spam-filter",
         "name": "Heuristic & DNSBL Spam Filter",
@@ -153,8 +163,8 @@
       "version": "1.1.0",
       "runtime": "frontend",
       "description": "Voice search your inbox and dictate emails using speech recognition or embedded local WASM speech model.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.3/voice-search-wasm.zip",
-      "sha256": "6ce098790b0c13483a020355843a5904e536e819595fff3ac519d461b1c932da",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.4/voice-search-wasm.zip",
+      "sha256": "8c06de877b5462e6f0d0182ad8e867391745fb0d8d8079e6b666d0e17f37faec",
       "manifest": {
         "id": "official.voice-search",
         "name": "Offline Voice Actions (WASM)",
