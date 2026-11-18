@@ -1,20 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/grimmdev/micromail-registry/main/schema.json",
   "version": "1.0.0",
-  "updated_at": "2026-11-18T00:03:37Z",
+  "updated_at": "2026-11-18T00:36:19Z",
   "addons": [
     {
       "id": "official.ai-composer",
       "name": "Smart Email Composer (Local Transformers & WASM)",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "runtime": "frontend",
       "description": "Compose and polish emails using client-side Transformers.js neural models and lightweight WASM running 100% in your browser.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.5/ai-composer-wasm.zip",
-      "sha256": "3c5d6f8561e4c3e93378d411177e078f7ad9fa416c7b7cde45b561f49f4c7646",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.6/ai-composer-wasm.zip",
+      "sha256": "69266aa869c1bf7f0aac6cd32ab604c2d9225da4db632b59ba158e16e9bcc60b",
       "manifest": {
         "id": "official.ai-composer",
         "name": "Smart Email Composer (Local Transformers & WASM)",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "runtime": "frontend",
         "description": "Compose and polish emails using client-side Transformers.js neural models and lightweight WASM running 100% in your browser.",
         "permissions": [
@@ -80,15 +80,15 @@
     {
       "id": "official.antivirus",
       "name": "WASM Anti-Virus & Threat Scanner",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "runtime": "backend",
       "description": "Scans attachments and email contents for malware signatures, dangerous executable payloads, and EICAR threats.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.5/antivirus-wasm.zip",
-      "sha256": "91608dcf612d257d900c799f94a32373b97aac7bd012c59f2cf59ad783ba96dd",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.6/antivirus-wasm.zip",
+      "sha256": "a915a8712b1777a4b04f537da8c1b43ed024d3e1f7467b5b15c88f42f083e53d",
       "manifest": {
         "id": "official.antivirus",
         "name": "WASM Anti-Virus & Threat Scanner",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "runtime": "backend",
         "description": "Scans attachments and email contents for malware signatures, dangerous executable payloads, and EICAR threats.",
         "permissions": [
@@ -125,15 +125,15 @@
     {
       "id": "official.spam-filter",
       "name": "Heuristic & DNSBL Spam Filter",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "runtime": "backend",
       "description": "Scores inbound emails in-container via WebAssembly before inbox delivery.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.5/spam-bayes-wasm.zip",
-      "sha256": "5a9a5c086cceed5eb1433991d18feb36c10aebaa3d467a7f62f0e866541dcbd9",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.6/spam-bayes-wasm.zip",
+      "sha256": "2f8a1a07a78120c3251948a180175205f4dc3e30c65f8bcaef36ad76cfb8c9eb",
       "manifest": {
         "id": "official.spam-filter",
         "name": "Heuristic & DNSBL Spam Filter",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "runtime": "backend",
         "description": "Scores inbound emails in-container via WebAssembly before inbox delivery.",
         "permissions": [
@@ -160,15 +160,15 @@
     {
       "id": "official.voice-search",
       "name": "Offline Voice Actions (WASM)",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "runtime": "frontend",
       "description": "Voice search your inbox and dictate emails using speech recognition or embedded local WASM speech model.",
-      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.5/voice-search-wasm.zip",
-      "sha256": "652cd3bfea5a5960e1bec9de81fd9d763db4082bc402fab116e0ecced3d12100",
+      "download_url": "https://github.com/MicroMail-Group/Addons/releases/download/v1.0.6/voice-search-wasm.zip",
+      "sha256": "b96d7b94904c50c0be93ca18d7feb79d35461de8eea4e135bf8e4969ec1eec87",
       "manifest": {
         "id": "official.voice-search",
         "name": "Offline Voice Actions (WASM)",
-        "version": "1.0.5",
+        "version": "1.0.6",
         "runtime": "frontend",
         "description": "Voice search your inbox and dictate emails using speech recognition or embedded local WASM speech model.",
         "permissions": [
